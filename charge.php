@@ -34,6 +34,9 @@
 
     ));
 
-    print_r($charge);
+    // print_r($charge);
+
+    // Redirect to success
+    header('Location: success.php?tid=' . $charge->id . '&product=' . $charge->description);
 
 ?>
