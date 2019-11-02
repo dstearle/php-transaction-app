@@ -22,6 +22,9 @@ var style = {
   }
 };
 
+// Style button with bootstrap
+document.querySelector('#payment-form button').classList = ('btn btn-primary');
+
 // Create an instance of the card Element.
 var card = elements.create('card', {style: style});
 
