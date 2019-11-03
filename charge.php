@@ -8,6 +8,8 @@
     require_once('lib/pdo_db.php');
     // Customer model
     require_once('models/Customer.php');
+    // Transaction model
+    require_once('models/Transaction.php');
 
 
 
@@ -59,6 +61,24 @@
 
     // Add customer to DB
     $customer->addCustomer($customerData);
+
+    // Transaction data
+    $transactionData = [
+
+        'id' => $charge->id,
+        'customer_id' => $charge->customer,
+        'product' => $charge->description,
+        'amount' => $charge->amount,
+        'currency' => $charge->currency,
+        'status' => $charge->status,
+
+    ];
+
+    // Instatiate transaction
+    $transaction = new Transaction();
+
+    // Add transaction to DB
+    $transaction->addTransaction($transactionData);
 
     // Redirect to success
     header('Location: success.php?tid=' . $charge->id . '&product=' . $charge->description);
