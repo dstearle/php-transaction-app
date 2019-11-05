@@ -15,6 +15,13 @@
 
 <br>
 
+**Notes:**
+
+- When testing the credit/debit field just type "42" over and over again
+- Needs XAMPP with Apache and MSQL running
+
+<br>
+
 **Dependencies:**
 
 - stripe: https://stripe.com/docs/stripe-js
